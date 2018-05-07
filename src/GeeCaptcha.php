@@ -14,7 +14,7 @@ class GeeCaptcha extends GeetestLib
      */
     public function isFromGTServer()
     {
-        $this->session->set_userdata('gtserver',1);
+        get_instance()->session->set_userdata('gtserver',1);
     }
 
     /**
@@ -47,7 +47,7 @@ class GeeCaptcha extends GeetestLib
     public function GTServerIsNormal()
     {
         $status = $this->pre_process();
-        $this->session->set_userdata('gtserver',$status);
+        get_instance()->session->set_userdata('gtserver',$status);
 
         return $this->get_response_str();
     }
