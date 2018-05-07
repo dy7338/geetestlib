@@ -15,6 +15,7 @@ class GeeCaptcha extends GeetestLib
     public function isFromGTServer()
     {
         get_instance()->session->set_userdata('gtserver',1);
+        return true;
     }
 
     /**
